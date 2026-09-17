@@ -123,16 +123,22 @@ print(result)
 
 # Question 21:
 
-class Student:
+class ShoppingCart:
+    def __init__(self):
+        self.items = []
 
-    def get_students(self):
-        students = input("Enter student names: ").split()
-        return students
+    def add_item(self, item):
+        self.items.append(item)
+
+    def show_items(self):
+        for item in self.items:
+            print(item)
 
 
-s1 = Student()
+cart = ShoppingCart()
 
-result = s1.get_students()
+cart.add_item("Book")
+cart.add_item("Pen")
+cart.add_item("Bag")
 
-print(result)
-
+cart.show_items()
