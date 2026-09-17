@@ -1,4 +1,4 @@
-# Question 13: Create a class called Greeter with a method say_hello() that prints "Hello!" when called. Create an object and call the method.
+# Question 13: 
 
 class Greeter:
     def number(self):
@@ -142,3 +142,102 @@ cart.add_item("Pen")
 cart.add_item("Bag")
 
 cart.show_items()
+
+
+# Q22:
+
+class Bankaccount:
+    def __init__(self,balance):
+        self.balance = balance
+
+    def withdraw (self,amount):
+        if amount >= self.balance:
+            print("Insufficent Balance")
+
+        else:
+            self.balance -= amount
+
+    def deposit (self,amount):
+        self.balance += amount
+
+    def show_details(self):
+       print(f"Balalnce is ${self.balance}")
+
+b1 = Bankaccount(20000)
+b1.deposit(12000)
+b1.show_details()
+
+
+
+# Q23:
+
+class Student:
+    def __init__(self,name,marks):
+        self.name = name
+        self.marks = marks
+    
+
+    def average(self):
+        return sum(self.marks) / len(self.marks)
+
+s1 = Student("Ram",[80,90,70])
+
+print(s1.average())
+
+
+
+# sample type  of question:
+
+class Student1:
+    def __init__(self,name, age,marks):
+        self.name = name
+        self.age = age
+        self.marks = marks
+
+
+    def average1(self):
+        return sum(self.marks) / len(self.marks)
+
+    def total (self):
+        return sum(self.marks)
+
+    def percentage(self):
+        total = sum(self.marks)
+        percentage = (total / (len(self.marks) *100)) *100
+        return percentage
+
+
+s2 = Student1("Ram",12,[45,30,22,43,45,50])
+
+print(s2.average1())
+print(s2.percentage())
+print(s2.total())
+
+
+
+# Q24:
+
+class Library:
+    def __init__(self):
+        self.books = []
+
+    def add_book(self, title):
+        self.books.append(title)
+
+    def remove_book(self, title):
+        self.books.remove(title)
+
+    def total_books(self):
+        return len(self.books)
+
+
+library = Library()
+
+library.add_book("Python")
+library.add_book("Java")
+library.add_book("C++")
+library.add_book("HTML")
+
+library.remove_book("Java")
+
+print("Total books:", library.total_books())
