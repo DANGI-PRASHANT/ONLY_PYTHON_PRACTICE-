@@ -100,3 +100,28 @@ s = SavingAccount(1000)
 
 s.show_balance()
 s.show_details()
+
+
+
+# Question 9.
+
+class Employee:
+    def __init__(self,name,salary):
+        self.name = name
+        self.salary = salary
+
+    def show_salary (self):
+        print(f"Name: {self.name}")
+        print(f'Salary: {self.salary}')
+
+
+class Intern(Employee):
+    def show_stipend(self):
+        print(f"The salary as a stipend instead")
+
+
+i1 = Intern("ram",340000)
+
+i1.show_salary()
+i1.show_stipend()
+
