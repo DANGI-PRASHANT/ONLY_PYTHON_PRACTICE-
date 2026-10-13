@@ -16,3 +16,15 @@ for values in student.values():
 for key,values  in student.items():
     print(f"{key}:{values}")
 
+# checking key or value in Dictonary: 
+
+if "Name" in student:
+    print("Exists")
+
+if "Prashanta Basnet"in student.values():
+    print("Found")
+else:
+    print("Invalid")
+
+
+# 
